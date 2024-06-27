@@ -13,3 +13,20 @@ istioctl install --set profile=demo -y
 ```{{}}
 
 </details>
+
+
+<br>
+<details><summary>Final Output Should be like</summary>
+<br>
+
+```plain 
+controlplane $ istioctl install --set profile=demo -y
+✔ Istio core installed
+✔ Istiod installed
+✔ Egress gateways installed
+✔ Ingress gateways installed
+✔ Installation complete
+Made this installation the default for injection and validation.
+```{{}}
+
+</details>
