@@ -1,12 +1,13 @@
 
-### Deploy `helloworld.yaml` Hello World application on Istio
+### Please enable Istio injection for the namespace
 
 <br>
 <details><summary>Solution</summary>
 <br>
 
 ```plain 
-kubectl apply -f helloworld.yaml
+Hint : "istioctl analyze" to check
+kubectl label namespace default istio-injection=enabled
 ```{{}}
 
 </details>
