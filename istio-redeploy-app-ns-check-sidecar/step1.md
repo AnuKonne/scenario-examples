@@ -8,7 +8,7 @@
 ```plain 
 kubectl describe pod PODNAME
 
--> docker.io/istio/proxyv2:1.22.1 <-
+-> docker.io/istio/image:version <-
 
 ```{{}}
 
