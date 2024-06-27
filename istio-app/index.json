@@ -3,7 +3,6 @@
   "description": "Task - 2",
   "details": {
     "intro": {
-      "text": "intro.md",
       "background": "background.sh"
     },
     "steps": [
