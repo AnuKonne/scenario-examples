@@ -46,6 +46,49 @@ spec:
     name: http
   selector:
     app: helloworld
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: helloworld-gateway
+spec:
+  selector:
+    istio: ingressgateway # Use the default Istio gateway selector
+  servers:
+  - port:
+      number: 80
+      name: http
+      protocol: HTTP
+    hosts:
+    - "hello.world.com"
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: helloworld
+spec:
+  hosts:
+  - "hello.world.com"
+  gateways:
+  - helloworld-gateway
+  http:
+  - match:
+    - uri:
+        prefix: /capital
+    route:
+    - destination:
+        host: helloworld
+        port:
+          number: 8080
+
+  - match:
+    - uri:
+        prefix: /small
+    route:
+    - destination:
+        host: helloworld
+        port:
+          number: 8080
 EOF
 
 echo 'apiVersion: apps/v1

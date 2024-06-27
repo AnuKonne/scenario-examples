@@ -136,6 +136,23 @@ spec:
         host: helloworld
         port:
           number: 8080
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: helloworld-dr
+spec:
+  host: helloworld
+  subsets:
+    - name: version1
+      labels:
+        version: appv1
+    - name: version2
+      labels:
+        version: appv2
+    - name: version3
+      labels:
+        version: appv3
 EOF
 
 echo 'apiVersion: apps/v1
