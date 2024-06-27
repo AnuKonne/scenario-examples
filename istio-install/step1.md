@@ -5,9 +5,9 @@
 <details><summary>Solution</summary>
 <br>
 
-```plain
+```plain 
 curl -L https://istio.io/downloadIstio | sh -
-cd istio-<version-number>
+cd istio-VERSIONNUMBER
 export PATH=$PWD/bin:$PATH
 istioctl install --set profile=demo -y
 ```{{exec}}
