@@ -1,6 +1,6 @@
 {
-  "title": "Istio Installation, Upgrade & Configuration",
-  "description": "Task - 3",
+  "title": "Securing Workloads",
+  "description": "Task - 13",
   "details": {
     "intro": {
       "text": "intro.md",
