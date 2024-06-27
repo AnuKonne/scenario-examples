@@ -1,7 +1,7 @@
 {
   "title": "Istio Installation, Upgrade & Configuration",
-  "description": "Task - 10",
-  "details": {
+  "description": "Task - 11",
+  "details": { 
     "intro": {
       "text": "intro.md",
       "background": "background.sh"
